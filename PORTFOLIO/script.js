@@ -1,6 +1,4 @@
-/* =====================================
-   Smooth Scroll
-===================================== */
+/*smooth scroll */
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
@@ -19,9 +17,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
-/* =====================================
-   Navbar Shadow
-===================================== */
+/* navbar shad*/
 
 const navbar = document.querySelector(".navbar");
 
@@ -44,14 +40,10 @@ window.addEventListener("scroll", ()=>{
 });
 
 
-/* =====================================
-   Typing Animation
-===================================== */
 
 
-/* =====================================
-   Fade Animation
-===================================== */
+
+/* fade anime */
 
 const observer=new IntersectionObserver((entries)=>{
 
@@ -83,9 +75,7 @@ observer.observe(section);
 });
 
 
-/* =====================================
-   Scroll To Top Button
-===================================== */
+/* scroll up */
 
 const topBtn=document.createElement("button");
 
@@ -172,9 +162,7 @@ window.addEventListener("scroll", () => {
 });
 
 
-/* =====================================
-   Image Hover
-===================================== */
+/*IMG Hover */
 
 document.querySelectorAll("img").forEach(img=>{
 
@@ -195,9 +183,7 @@ img.style.transform="scale(1)";
 
 
 
-/*=========================
-    Navbar Scroll Effect
-=========================*/
+/*NAVBAR SCROLL EFF*/
 
 const header = document.querySelector(".navbar");
 
@@ -219,9 +205,7 @@ if (header) {
 
 }
 
-/*=====================================
-        Timeline Progress
-=====================================*/
+/*Timeline Prog*/
 
 const timeline=document.querySelector(".timeline");
 const progress=document.querySelector(".timeline-progress");
@@ -245,9 +229,7 @@ window.addEventListener("scroll",()=>{
 });
 
 
-/*==========================
-      MOBILE MENU
-==========================*/
+/*cell menu*/
 
 window.onload = function () {
 

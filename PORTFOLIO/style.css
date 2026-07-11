@@ -1,6 +1,4 @@
-/* ===========================
-   GOOGLE FONT
-=========================== */
+/* GOOGLE FONT */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
@@ -20,9 +18,7 @@
 
 }
 
-/* ===========================
-   RESET
-=========================== */
+/*RESET*/
 
 * {
     margin: 0;
@@ -90,9 +86,7 @@ section{
 
 }
 
-/*==========================
-     SCROLL ANIMATION
-==========================*/
+/*SCROLLL ANIME*/
 
 .hidden{
 
@@ -112,9 +106,7 @@ section{
 
 }
 
-/* ===========================
-   NAVBAR
-=========================== */
+/* NAVBAR-- */
 header{
 
     position:fixed;
@@ -260,9 +252,7 @@ header.scrolled{
 
 }
 
-/* ===========================
-   HERO
-=========================== */
+/*HERO */
 
 .hero{
 
@@ -475,9 +465,7 @@ header.scrolled{
     box-shadow:0 10px 25px rgba(255,255,255,.12);
 
 }
-/* ===========================
-   HERO IMAGE
-=========================== */
+/* MY IMAGE */
 
 .hero-image {
 
@@ -560,9 +548,7 @@ header.scrolled{
 
 }
 
-/*==============================
-    SECTION TITLE
-==============================*/
+/*SECTION TITLE */
 
 .section-title {
 
@@ -578,9 +564,7 @@ header.scrolled{
 
 
 
-/* ==========================
-    ABOUT
-========================== */
+/*ABOUT */
 
 .section-heading{
 
@@ -737,9 +721,7 @@ header.scrolled{
 
 }
 
-/*==================================
-        EDUCATION
-==================================*/
+/*EDU DETAILS*/
 
 .timeline{
 
@@ -923,9 +905,7 @@ header.scrolled{
 
 }
 
-/*==========================
-        SKILLS
-==========================*/
+/*SKILLSS*/
 
 .skills{
 
@@ -1063,9 +1043,7 @@ header.scrolled{
 
 }
 
-/*==========================
-        PROJECTS
-==========================*/
+/*PROJ*/
 
 .projects{
 
@@ -1268,9 +1246,7 @@ header.scrolled{
     border:1px solid rgba(255,255,255,.15);
 
 }
-/*==========================
-     CERTIFICATES
-==========================*/
+/*CERTI*/
 
 .certificates{
 
@@ -1425,9 +1401,7 @@ header.scrolled{
     transform:translateY(-3px);
 
 }
-/*==========================
-   PROFESSIONAL JOURNEY
-==========================*/
+/*PROF JOUR*/
 
 .experience{
 
@@ -1543,9 +1517,7 @@ header.scrolled{
 
 }
 
-/*==========================
-     ACHIEVEMENTS
-==========================*/
+/*ACHIEVE*/
 
 .achievements{
 
@@ -1615,9 +1587,7 @@ header.scrolled{
 
 }
 
-/*==========================
-        CONTACT
-==========================*/
+/*CONTACT */
 
 .contact{
 
@@ -1774,9 +1744,7 @@ header.scrolled{
 
 }
 
-/*==========================
-          FOOTER
-==========================*/
+/*FOOTER*/
 
 .footer{
 
@@ -1924,9 +1892,7 @@ header.scrolled{
 
 }
 
-/*=================================
-    SCROLLBAR
-=================================*/
+/*SCROLLBAR*/
 
 ::-webkit-scrollbar {
 
@@ -1949,9 +1915,7 @@ header.scrolled{
 
 }
 
-/*=================================
-    ANIMATION
-=================================*/
+/*ANIME*/
 
 .card,
 .project-card,
@@ -1975,9 +1939,7 @@ header.scrolled{
 
 }
 
-/*=================================
-    RESPONSIVE
-=================================*/
+/*RESPONSE*/
 
 @media(max-width:1000px) {
 
@@ -2111,9 +2073,7 @@ header.scrolled{
 
 }
 
-/*==========================
-      HERO INTRO
-==========================*/
+/*MY INTRO*/
 
 .reveal>*{
 
@@ -2197,9 +2157,7 @@ header.scrolled{
 
 }
 
-/*====================================
-        CURSOR GLOW
-====================================*/
+/*CURSOR GLOW*/
 
 .cursor-glow{
 
@@ -2259,9 +2217,7 @@ left:17px!important;
 }
 
 
-/*=========================================
-        RESPONSIVE DESIGN
-=========================================*/
+/*RESPONSE DES*/
 
 /* ---------- Large Tablets ---------- */
 
@@ -2561,9 +2517,7 @@ section{
 
 }
 
-/*==========================
-      HAMBURGER MENU
-==========================*/
+/*HAMBURG*/
 
 .menu-toggle{
 
