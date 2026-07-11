@@ -1,0 +1,23 @@
+{
+  "name": "prem-portfolio",
+  "version": "1.0.0",
+  "description": "Prem Kumar - Cyber Security Portfolio",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "portfolio",
+    "cybersecurity"
+  ],
+  "author": "Prem Kumar",
+  "license": "MIT",
+  "dependencies": {
+    "@vercel/analytics": "^1.4.1"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  }
+}

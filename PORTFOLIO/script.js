@@ -1,3 +1,7 @@
+/* Vercel Analytics */
+import { inject } from '@vercel/analytics';
+inject();
+
 /*smooth scroll */
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
