@@ -42,6 +42,11 @@ h5 {
     font-weight: 700;
 
 }
+html{
+
+    scroll-behavior:smooth;
+
+}
 
 body {
 
@@ -75,16 +80,68 @@ a {
 
 section{
 
+    position:relative;
+
+    z-index:2;
+
     padding:70px 10%;
 
     scroll-margin-top:100px;
 
 }
 
+/*==========================
+     SCROLL ANIMATION
+==========================*/
+
+.hidden{
+
+    opacity:0;
+
+    transform:translateY(70px);
+
+    transition:all .9s ease;
+
+}
+
+.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
 /* ===========================
    NAVBAR
 =========================== */
+header{
 
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    transition:.4s ease;
+
+}
+
+header.scrolled{
+
+    background:rgba(15,15,15,.85);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    box-shadow:0 10px 35px rgba(0,0,0,.35);
+
+}
 .navbar {
 
     position: fixed;
@@ -97,17 +154,25 @@ section{
 
     width: fit-content;
 
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+
     padding: 18px 35px;
 
-    background: rgba(25, 25, 25, .65);
+    background: rgba(25,25,25,.65);
 
     backdrop-filter: blur(18px);
 
-    border: 1px solid rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255,255,255,.08);
 
     border-radius: 60px;
 
-    z-index: 1000;
+    z-index: 100;
 
 }
 
@@ -672,25 +737,17 @@ section{
 
 }
 
-/*==========================
-      EDUCATION
-===========================*/
-
-.education{
-
-    background:var(--bg);
-
-}
+/*==================================
+        EDUCATION
+==================================*/
 
 .timeline{
 
     position:relative;
 
-    max-width:900px;
+    max-width:1100px;
 
-    margin:60px auto 0;
-
-    padding-left:40px;
+    margin:70px auto;
 
 }
 
@@ -700,33 +757,99 @@ section{
 
     position:absolute;
 
-    left:10px;
+    left:50%;
 
     top:0;
 
-    width:2px;
+    width:3px;
 
     height:100%;
 
-    background:rgba(255,255,255,.12);
+    background:rgba(255,255,255,.15);
+
+    transform:translateX(-50%);
+
+}
+
+.timeline-progress{
+
+    position:absolute;
+
+    left:50%;
+
+    top:0;
+
+    width:3px;
+
+    height:0;
+
+    background:white;
+
+    transform:translateX(-50%);
+
+    transition:height .15s linear;
+
+    z-index:1;
 
 }
 
 .timeline-item{
 
+    width:50%;
+
     position:relative;
 
-    margin-bottom:60px;
+    margin-bottom:70px;
 
 }
 
-.timeline-dot{
+.timeline-item.left{
+
+    left:0;
+
+    padding-right:70px;
+
+}
+
+.timeline-item.right{
+
+    left:50%;
+
+    padding-left:70px;
+
+}
+
+.timeline-content{
+
+    background:#171717;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.4s;
+
+    position:relative;
+
+}
+
+.timeline-content:hover{
+
+    transform:translateY(-10px);
+
+    border-color:white;
+
+    box-shadow:0 15px 45px rgba(255,255,255,.06);
+
+}
+
+.timeline-item::before{
+
+    content:"";
 
     position:absolute;
-
-    left:-38px;
-
-    top:28px;
 
     width:18px;
 
@@ -736,109 +859,67 @@ section{
 
     background:white;
 
-    transition:.4s;
+    top:35px;
+
+    z-index:2;
 
 }
 
-.timeline-card{
+.timeline-item.left::before{
 
-    background:#171717;
-
-    border:1px solid rgba(255,255,255,.08);
-
-    border-radius:20px;
-
-    padding:35px;
-
-    transition:.35s;
+    right:-9px;
 
 }
 
-.timeline-card:hover{
+.timeline-item.right::before{
 
-    transform:translateY(-8px);
-
-    border-color:white;
-
-    box-shadow:0 15px 40px rgba(255,255,255,.06);
+    left:-9px;
 
 }
 
-.timeline-item:hover .timeline-dot{
-
-    transform:scale(1.4);
-
-}
-
-.timeline-date{
+.year{
 
     display:inline-block;
-
-    margin-bottom:15px;
-
-    color:#A3A3A3;
-
-    font-size:15px;
-
-    letter-spacing:1px;
-
-}
-
-.timeline-card h3{
-
-    font-size:28px;
-
-    margin-bottom:8px;
-
-}
-
-.timeline-card h4{
-
-    font-size:20px;
-
-    color:#D6D6D6;
 
     margin-bottom:18px;
-
-}
-
-.timeline-card p{
-
-    color:#BDBDBD;
-
-    line-height:1.8;
-
-}
-
-.status{
-
-    display:inline-block;
-
-    margin-top:25px;
 
     padding:8px 18px;
 
     border-radius:30px;
 
+    background:white;
+
+    color:black;
+
+    font-weight:600;
+
     font-size:14px;
+
+}
+
+.timeline-content h3{
+
+    margin-bottom:10px;
+
+    font-size:24px;
+
+}
+
+.timeline-content h4{
+
+    color:#cccccc;
+
+    margin-bottom:20px;
 
     font-weight:500;
 
 }
 
-.current{
+.timeline-content p{
 
-    background:white;
+    color:#BDBDBD;
 
-    color:black;
-
-}
-
-.completed{
-
-    background:#2A2A2A;
-
-    color:white;
+    line-height:1.8;
 
 }
 
@@ -2027,5 +2108,532 @@ section{
     transform: translateY(-5px);
 
     box-shadow: 0 0 20px #FFFFFF;
+
+}
+
+/*==========================
+      HERO INTRO
+==========================*/
+
+.reveal>*{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    animation:intro .8s forwards;
+
+}
+
+.delay-1{
+
+    animation-delay:.2s;
+
+}
+
+.delay-2{
+
+    animation-delay:.4s;
+
+}
+
+.delay-3{
+
+    animation-delay:.6s;
+
+}
+
+.delay-4{
+
+    animation-delay:.8s;
+
+}
+
+.delay-5{
+
+    animation-delay:1s;
+
+}
+
+.delay-6{
+
+    animation-delay:1.2s;
+
+}
+
+.delay-7{
+
+    animation-delay:1.4s;
+
+    opacity:0;
+
+    transform:scale(.92);
+
+    animation:introScale 1s forwards;
+
+}
+
+@keyframes intro{
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes introScale{
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+/*====================================
+        CURSOR GLOW
+====================================*/
+
+.cursor-glow{
+
+    position:fixed;
+
+    width:260px;
+
+    height:260px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+    rgba(255,255,255,.10) 0%,
+    rgba(255,255,255,.04) 35%,
+    transparent 70%);
+
+    pointer-events:none;
+
+    transform:translate(-50%,-50%);
+
+    z-index:0;
+
+    transition:
+    left .15s ease-out,
+    top .15s ease-out;
+
+    filter:blur(12px);
+
+}
+
+@media(max-width:900px){
+
+.timeline::before{
+
+left:25px;
+
+}
+
+.timeline-item{
+
+width:100%;
+
+left:0!important;
+
+padding-left:70px;
+
+padding-right:0;
+
+}
+
+.timeline-item::before{
+
+left:17px!important;
+
+}
+
+}
+
+
+/*=========================================
+        RESPONSIVE DESIGN
+=========================================*/
+
+/* ---------- Large Tablets ---------- */
+
+@media (max-width:1024px){
+
+.hero{
+
+    gap:60px;
+
+}
+
+.hero h1{
+
+    font-size:60px;
+
+}
+
+.about-container{
+
+    flex-direction:column;
+
+    gap:50px;
+
+}
+
+.about-image{
+
+    order:-1;
+
+}
+
+.contact-container{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+
+
+/* ---------- Tablets ---------- */
+
+@media (max-width:900px){
+
+.hero{
+
+    flex-direction:column-reverse;
+
+    text-align:center;
+
+    justify-content:center;
+
+    gap:50px;
+
+}
+
+.hero-text{
+
+    width:100%;
+
+}
+
+.hero-buttons{
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+}
+
+.social-icons{
+
+    justify-content:center;
+
+}
+
+.about-container{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.about-highlights{
+
+    grid-template-columns:1fr;
+
+}
+
+.about-cards{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.skills-grid,
+
+.projects-grid,
+
+.certificate-grid,
+
+.journey-grid,
+
+.achievement-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.contact-container{
+
+    grid-template-columns:1fr;
+
+}
+
+.timeline::before{
+
+    left:20px;
+
+}
+
+.timeline-progress{
+
+    left:20px;
+
+}
+
+.timeline-item{
+
+    width:100%;
+
+    left:0!important;
+
+    padding-left:60px;
+
+    padding-right:0;
+
+}
+
+.timeline-item::before{
+
+    left:11px!important;
+
+}
+
+.footer{
+
+    padding:80px 7% 35px;
+
+}
+
+}
+
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width:768px){
+
+section{
+
+    padding:80px 7%;
+
+}
+
+.hero h1{
+
+    font-size:46px;
+
+}
+
+.hero h2{
+
+    font-size:26px;
+
+}
+
+.hero p{
+
+    font-size:16px;
+
+}
+
+.hero-image img{
+
+    width:280px;
+
+    height:280px;
+
+}
+
+.section-heading h2{
+
+    font-size:38px;
+
+}
+
+.about-cards{
+
+    grid-template-columns:1fr;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+    width:100%;
+
+}
+
+.hero-buttons .btn{
+
+    width:100%;
+
+}
+
+.project-buttons{
+
+    flex-direction:column;
+
+}
+
+.contact-form input,
+
+.contact-form textarea,
+
+.contact-form button{
+
+    width:100%;
+
+}
+
+}
+
+
+
+/* ---------- Small Phones ---------- */
+
+@media (max-width:480px){
+
+.hero h1{
+
+    font-size:38px;
+
+}
+
+.hero h2{
+
+    font-size:22px;
+
+}
+
+.hero-image img{
+
+    width:220px;
+
+    height:220px;
+
+}
+
+.section-heading h2{
+
+    font-size:30px;
+
+}
+
+.timeline-content{
+
+    padding:25px;
+
+}
+
+.info-card,
+
+.skill-card,
+
+.project-card,
+
+.certificate-card,
+
+.journey-card,
+
+.achievement-card{
+
+    padding:25px;
+
+}
+
+.social-icons{
+
+    gap:18px;
+
+}
+
+}
+
+/*==========================
+      HAMBURGER MENU
+==========================*/
+
+.menu-toggle{
+
+    display:none;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+    color:white;
+
+}
+
+
+@media (max-width:900px){
+
+    .navbar{
+
+        width:90%;
+
+        display:flex;
+
+        justify-content:space-between;
+
+        align-items:center;
+
+        padding:18px 25px;
+
+    }
+
+    .menu-toggle{
+
+        display:block;
+
+        font-size:30px;
+
+        cursor:pointer;
+
+    }
+
+    .nav-links{
+
+        display:none;
+
+        position:absolute;
+
+        top:85px;
+
+        left:0;
+
+        width:100%;
+
+        background:#111;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:20px;
+
+        padding:30px 0;
+
+        border-radius:20px;
+
+    }
+
+    .nav-links.active{
+
+        display:flex !important;
+
+    }
 
 }

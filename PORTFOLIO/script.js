@@ -193,15 +193,86 @@ img.style.transform="scale(1)";
 });
 
 
-/* =====================================
-   Loading Screen
-===================================== */
 
-window.onload=()=>{
 
-document.body.style.opacity="1";
+/*=========================
+    Navbar Scroll Effect
+=========================*/
+
+const header = document.querySelector(".navbar");
+
+if (header) {
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 50) {
+
+            header.classList.add("scrolled");
+
+        } else {
+
+            header.classList.remove("scrolled");
+
+        }
+
+    });
+
+}
+
+/*=====================================
+        Timeline Progress
+=====================================*/
+
+const timeline=document.querySelector(".timeline");
+const progress=document.querySelector(".timeline-progress");
+
+window.addEventListener("scroll",()=>{
+
+    if(!timeline || !progress) return;
+
+    const rect=timeline.getBoundingClientRect();
+
+    const windowHeight=window.innerHeight;
+
+    const totalHeight=timeline.offsetHeight;
+
+    let percent=(windowHeight-rect.top)/(windowHeight+totalHeight);
+
+    percent=Math.max(0,Math.min(percent,1));
+
+    progress.style.height=(percent*100)+"%";
+
+});
+
+
+/*==========================
+      MOBILE MENU
+==========================*/
+
+window.onload = function () {
+
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navMenu = document.querySelector(".nav-links");
+    const navItems = document.querySelectorAll(".nav-links a");
+
+    if (menuToggle && navMenu) {
+
+        menuToggle.onclick = function () {
+
+            navMenu.classList.toggle("active");
+
+        };
+
+        navItems.forEach(item => {
+
+            item.onclick = function () {
+
+                navMenu.classList.remove("active");
+
+            };
+
+        });
+
+    }
 
 };
-
-document.body.style.opacity="0";
-document.body.style.transition="1s";
