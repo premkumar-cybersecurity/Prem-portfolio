@@ -258,3 +258,89 @@ window.onload = function () {
     }
 
 };
+
+/*==================================
+     UNIVERSAL CARD GLOW
+==================================*/
+
+const scrollCards = document.querySelectorAll(".scroll-card");
+
+const glowObserver = new IntersectionObserver((entries)=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            scrollCards.forEach(card=>{
+
+                card.classList.remove("active-card");
+
+            });
+
+            entry.target.classList.add("active-card");
+
+        }
+
+    });
+
+},{
+    threshold:0.55
+});
+
+scrollCards.forEach(card=>{
+
+    glowObserver.observe(card);
+
+});
+
+/*==================================
+      FADE UP ANIMATION
+==================================*/
+
+const fadeElements = document.querySelectorAll(".fade-up");
+
+const fadeObserver = new IntersectionObserver((entries)=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("show");
+
+        }
+
+    });
+
+},{
+    threshold:0.2
+});
+
+fadeElements.forEach(element=>{
+
+    fadeObserver.observe(element);
+
+});
+
+/*==========================
+      FLIP CARD
+==========================*/
+
+const flipCard = document.querySelector(".flip-card");
+const progressBtn = document.querySelector(".progress-btn");
+const backBtn = document.querySelector(".back-btn");
+
+if (flipCard && progressBtn && backBtn) {
+
+    progressBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        flipCard.classList.add("flipped");
+    });
+
+    backBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        flipCard.classList.remove("flipped");
+    });
+
+}

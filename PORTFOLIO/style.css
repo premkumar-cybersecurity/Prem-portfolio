@@ -677,18 +677,26 @@ header.scrolled{
 
 .info-card{
 
-    background:#171717;
+    background:#141414;
 
     border:1px solid rgba(255,255,255,.08);
 
-    border-radius:20px;
+    border-radius:22px;
 
-    padding:35px;
-
-    transition:.35s;
+    padding:35px 25px;
 
     text-align:center;
 
+    transition:.45s ease;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.active-card{
+    background:#1b1b1b;
 }
 
 .info-card i{
@@ -1063,19 +1071,83 @@ header.scrolled{
 
 }
 
+
+
 .project-card{
 
     background:#171717;
-
     border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    overflow:hidden;
+    transition:.4s ease, box-shadow .4s ease;
+
+    display:flex;
+    flex-direction:column;
+
+    height:100%;
+}
+
+/*====================================
+        FLIP CARD
+====================================*/
+
+.flip-card{
+
+    perspective:1500px;
+
+}
+
+.flip-inner{
+
+    position:relative;
+
+    width:100%;
+
+    height:100%;
+
+    transition:transform .8s ease;
+
+    transform-style:preserve-3d;
+
+}
+
+.flip-card.flipped .flip-inner{
+
+    transform:rotateY(180deg);
+
+}
+
+.flip-front,
+.flip-back{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    backface-visibility:hidden;
+
+    -webkit-backface-visibility:hidden;
 
     border-radius:20px;
 
     overflow:hidden;
 
-    transition:.4s;
+    background:#171717;
 
 }
+
+.flip-back{
+
+    transform:rotateY(180deg);
+
+    padding:30px;
+
+}
+
 
 .project-card:hover{
 
@@ -1091,19 +1163,135 @@ header.scrolled{
 
     position:relative;
 
+    height:230px;
+
     overflow:hidden;
 
 }
+
 
 .project-image img{
 
     width:100%;
 
-    height:230px;
+    height:100%;
 
     object-fit:cover;
 
-    transition:.45s;
+    transition:transform .5s ease;
+
+}
+.current-phase{
+
+    margin:30px 0;
+
+    padding:18px 0;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.current-phase span{
+
+    display:block;
+
+    color:#888;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    margin-bottom:10px;
+
+}
+
+.current-phase h4{
+
+    font-size:28px;
+
+}
+
+.progress-circle{
+
+    width:140px;
+
+    height:140px;
+
+    border:6px solid white;
+
+    border-radius:50%;
+
+    margin:25px auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:30px;
+
+    font-weight:bold;
+
+}
+
+.progress-section{
+
+    margin-top:25px;
+
+}
+
+.progress-section h4{
+
+    margin-bottom:15px;
+
+}
+
+.progress-section ul{
+
+    list-style:none;
+
+}
+
+.progress-section li{
+
+    margin-bottom:10px;
+
+}
+
+.back-btn{
+
+    margin-top:30px;
+
+    width:100%;
+
+}
+
+.project-card:hover .project-image img{
+
+    transform:scale(1.08);
+
+}
+
+.project-image::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.15);
+
+    transition:.4s ease;
+
+}
+
+.project-card:hover .project-image::after{
+
+    background:rgba(0,0,0,.35);
 
 }
 
@@ -1112,6 +1300,41 @@ header.scrolled{
     transform:scale(1.08);
 
 }
+
+.current-phase{
+
+    margin:25px 0;
+    padding:18px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.current-phase span{
+
+    display:block;
+
+    color:#9f9f9f;
+
+    font-size:13px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+    margin-bottom:8px;
+
+}
+
+.current-phase h4{
+
+    font-size:20px;
+
+    font-weight:600;
+
+}
+
 
 .project-status{
 
@@ -1133,9 +1356,20 @@ header.scrolled{
 
 .completed{
 
-    background:white;
+    background:#ffffff;
 
-    color:black;
+    color:#111;
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+    box-shadow:
+        0 6px 18px rgba(255,255,255,.18);
 
 }
 
@@ -1177,6 +1411,14 @@ header.scrolled{
 
 }
 
+.flip-front .project-content{
+
+    display:flex;
+    flex-direction:column;
+    height:100%;
+
+}
+
 .tech-stack{
 
     display:flex;
@@ -1191,13 +1433,21 @@ header.scrolled{
 
 .tech-stack span{
 
-    border:1px solid rgba(255,255,255,.15);
+    padding:9px 18px;
 
     border-radius:30px;
 
-    padding:8px 15px;
+    border:1px solid rgba(255,255,255,.12);
 
-    font-size:13px;
+    background:#1f1f1f;
+
+    transition:.3s;
+
+}
+
+.project-card:hover .tech-stack span{
+
+    border-color:white;
 
 }
 
@@ -1205,7 +1455,20 @@ header.scrolled{
 
     display:flex;
 
+    justify-content:space-between;
+
+    align-items:center;
+
     gap:15px;
+
+    margin-top:auto;
+
+}
+.project-card:hover .project-buttons{
+
+    opacity:1;
+
+    transform:translateY(0);
 
 }
 
@@ -1213,39 +1476,80 @@ header.scrolled{
 
     flex:1;
 
-    text-align:center;
+    height:52px;
 
-    padding:12px;
+    display:flex;
 
-    background:white;
+    justify-content:center;
 
-    color:black;
+    align-items:center;
 
-    border-radius:10px;
+    gap:10px;
 
-    text-decoration:none;
+    background:#ffffff;
+
+    color:#111;
+
+    border:1px solid #ffffff;
+
+    border-radius:12px;
+
+    font-size:15px;
 
     font-weight:600;
 
-    transition:.3s;
+    transition:all .35s ease;
+
+    cursor:pointer;
 
 }
 
 .project-btn:hover{
 
-    transform:translateY(-3px);
+    transform:translateY(-4px);
+
+    background:#f3f3f3;
+
+    color:#000;
+
+    box-shadow:
+        0 12px 30px rgba(255,255,255,.15);
 
 }
+
 
 .project-btn.outline{
 
     background:transparent;
 
-    color:white;
+    color:#fff;
 
-    border:1px solid rgba(255,255,255,.15);
+    border:1px solid rgba(255,255,255,.18);
 
 }
+
+.project-btn.outline:hover{
+
+    background:#222;
+
+    border-color:#fff;
+
+    color:#fff;
+
+}
+
+.project-btn i{
+
+    transition:.35s ease;
+
+}
+
+.project-btn:hover i{
+
+    transform:translateX(3px);
+
+}
+
 /*CERTI*/
 
 .certificates{
@@ -2591,3 +2895,227 @@ section{
     }
 
 }
+
+/*==========================
+      FLIP CARD
+===========================*/
+
+.flip-card{
+
+    position:relative;
+
+    height:640px;
+
+    perspective:1400px;
+
+}
+
+.flip-inner{
+
+    width:100%;
+    height:100%;
+
+    position:relative;
+
+    transition:.8s;
+
+    transform-style:preserve-3d;
+
+}
+
+.flip-card.flipped .flip-inner{
+
+    transform:rotateY(180deg);
+
+}
+
+.flip-front,
+.flip-back{
+
+    position:absolute;
+
+    inset:0;
+
+    background:#171717;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    backface-visibility:hidden;
+
+}
+
+.flip-back{
+
+    transform:rotateY(180deg);
+
+    padding:30px;
+
+}
+
+.flip-front .project-content{
+
+    padding:30px;
+
+}
+
+.current-phase{
+
+    margin:30px 0;
+
+    padding:18px 0;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.current-phase span{
+
+    display:block;
+
+    color:#999;
+
+    font-size:13px;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+}
+
+.current-phase h4{
+
+    margin-top:12px;
+
+    font-size:28px;
+
+}
+
+.progress-btn{
+
+    width:100%;
+
+}
+
+.flip-back h3{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+}
+
+.progress-circle{
+
+    width:130px;
+
+    height:130px;
+
+    border:7px solid white;
+
+    border-radius:50%;
+
+    margin:0 auto 30px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+}
+
+.completed-section,
+.upcoming-section{
+
+    margin-top:25px;
+
+}
+
+.completed-section ul,
+.upcoming-section ul{
+
+    list-style:none;
+
+    margin-top:15px;
+
+}
+
+.completed-section li,
+.upcoming-section li{
+
+    margin-bottom:12px;
+
+}
+
+.back-btn{
+
+    width:100%;
+
+    margin-top:30px;
+
+}
+
+
+/*==================================
+      SECTION TITLE ANIMATION
+==================================*/
+
+.fade-up{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+
+}
+
+.fade-up.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+@media (max-width:768px){
+
+    .active-card{
+
+        transform:translateY(-8px) scale(1.02);
+
+        border:1px solid rgba(255,255,255,.9);
+
+        box-shadow:
+            0 0 20px rgba(255,255,255,.08),
+            0 0 45px rgba(255,255,255,.05);
+
+    }
+
+    .project-buttons{
+
+    flex-direction:column;
+
+}
+
+.project-btn{
+
+    width:100%;
+
+}
+
+}
+

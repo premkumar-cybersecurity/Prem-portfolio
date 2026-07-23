@@ -127,8 +127,8 @@
     <section id="about" class="about">
 
         <div class="section-heading">
-            <span>ABOUT</span>
-            <h2>Who I Am</h2>
+            <span class="fade-up">ABOUT</span>
+            <h2 class="fade-up">Who I Am</h2>
         </div>
 
         <div class="about-container">
@@ -166,25 +166,25 @@
 
         <div class="about-cards">
 
-            <div class="info-card">
+            <div class="info-card scroll-card">
                 <i class="fas fa-graduation-cap"></i>
                 <h4>Education</h4>
                 <p>Integrated B.Tech + M.Tech</p>
             </div>
 
-            <div class="info-card">
+            <div class="info-card scroll-card">
                 <i class="fas fa-shield-halved"></i>
                 <h4>Specialization</h4>
                 <p>Cyber Security</p>
             </div>
 
-            <div class="info-card">
+            <div class="info-card scroll-card">
                 <i class="fas fa-layer-group"></i>
                 <h4>Focus Areas</h4>
                 <p>Cloud Security<br>AI Security<br>Ethical Hacking</p>
             </div>
 
-            <div class="info-card">
+            <div class="info-card scroll-card">
                 <i class="fas fa-bullseye"></i>
                 <h4>Career Goal</h4>
                 <p>Cloud Security Engineer</p>
@@ -199,12 +199,10 @@
     <section id="education" class="education">
 
         <div class="section-heading">
-
-            <span>EDUCATION</span>
-
-            <h2>Academic Journey</h2>
-
+            <span class="fade-up">EDUCATION</span>
+            <h2 class="fade-up">Academic Journey</h2>
         </div>
+
 
         <div class="timeline">
 
@@ -292,18 +290,15 @@
     <section id="skills" class="skills">
 
         <div class="section-heading">
-
-            <span>TECHNICAL SKILLS</span>
-
-            <h2>Technologies, Domains & Tools</h2>
-
+            <span class="fade-up">TECHNICAL SKILLS</span>
+            <h2 class="fade-up">Technologies, Domains & Tools</h2>
         </div>
 
         <div class="skills-grid">
 
             <!-- Cyber Security -->
 
-            <div class="skill-card">
+            <div class="skill-card scroll-card">
 
                 <i class="fas fa-shield-halved"></i>
 
@@ -323,7 +318,7 @@
 
             <!-- Cloud Security -->
 
-            <div class="skill-card">
+            <div class="skill-card scroll-card">
 
                 <i class="fas fa-cloud"></i>
 
@@ -343,7 +338,7 @@
 
             <!-- AI Security -->
 
-            <div class="skill-card">
+            <div class="skill-card scroll-card">
 
                 <i class="fas fa-brain"></i>
 
@@ -363,7 +358,7 @@
 
             <!-- Networking -->
 
-            <div class="skill-card">
+            <div class="skill-card scroll-card">
 
                 <i class="fas fa-network-wired"></i>
 
@@ -384,7 +379,7 @@
 
             <!-- Programming -->
 
-            <div class="skill-card">
+            <div class="skill-card scroll-card">
 
                 <i class="fas fa-code"></i>
 
@@ -405,7 +400,7 @@
 
             <!-- Tools -->
 
-            <div class="skill-card">
+            <div class="skill-card scroll-card">
 
                 <i class="fas fa-screwdriver-wrench"></i>
 
@@ -432,30 +427,32 @@
     <section id="projects" class="projects">
 
         <div class="section-heading">
-
-            <span>PROJECTS</span>
-
-            <h2>Featured Work</h2>
-
+            <span class="fade-up">PROJECTS</span>
+            <h2 class="fade-up">Featured Work</h2>
         </div>
 
         <div class="projects-grid">
 
             <!-- Portfolio Website -->
 
-            <div class="project-card">
+            <div class="project-card scroll-card">
 
                 <div class="project-image">
 
-                    <img src="assets/project1.png" alt="Portfolio Website">
+                    <img src="assets/project1.png">
 
-                    <span class="project-status completed">Completed</span>
+                    <span class="project-status completed">
+                        Completed
+                    </span>
+
 
                 </div>
 
                 <div class="project-content">
 
                     <h3>Personal Portfolio</h3>
+
+
 
                     <p>
                         A modern responsive portfolio website showcasing my
@@ -473,69 +470,150 @@
 
                     <div class="project-buttons">
 
-                        <a href="#" class="project-btn">Live Demo</a>
+                        <a href="https://premkumar-portfolio-kohl.vercel.app/" target="_blank" class="project-btn">
 
-                        <a href="https://github.com/premkumar-cybersecurity" target="_blank"
+                            <i class="fas fa-arrow-up-right-from-square"></i>
+                            <span>View Live</span>
+
+                        </a>
+
+                        <a href="https://github.com/premkumar-cybersecurity/Prem-portfolio" target="_blank"
                             class="project-btn outline">
 
-                            GitHub
+                            <i class="fab fa-github"></i>
+                            <span>Source Code</span>
 
                         </a>
 
                     </div>
 
-                </div>
 
-            </div>
-
-            <!-- Password Manager -->
-
-            <div class="project-card">
-
-                <div class="project-image">
-
-                    <img src="assets/project2.png" alt="Password Manager">
-
-                    <span class="project-status progress">In Progress</span>
-
-                </div>
-
-                <div class="project-content">
-
-                    <h3>Password Manager</h3>
-
-                    <p>
-                        Developing a secure password management application
-                        with encryption and authentication features.
-                    </p>
-
-                    <div class="tech-stack">
-
-                        <span>Python</span>
-                        <span>Encryption</span>
-                        <span>Security</span>
-
-                    </div>
-
-                    <div class="project-buttons">
-
-                        <a href="#" class="project-btn">Coming Soon</a>
-
-                        <a href="#" class="project-btn outline">
-
-                            Details
-
-                        </a>
-
-                    </div>
 
                 </div>
 
             </div>
+
+            <!-- ================= PASSWORD MANAGER ================= -->
+
+<div class="project-card flip-card scroll-card">
+
+    <div class="flip-inner">
+
+        <!-- ================= FRONT ================= -->
+
+        <div class="flip-front">
+
+            <div class="project-image">
+
+                <img src="assets/project2.png" alt="Password Manager">
+
+                <span class="project-status progress">
+
+                    🚧 In Development
+
+                </span>
+
+            </div>
+
+            <div class="project-content">
+
+                <h3>Password Manager</h3>
+
+                <p>
+
+                    Developing a secure password management application with
+                    encryption, authentication and secure storage.
+
+                </p>
+
+                <div class="tech-stack">
+
+                    <span>Python</span>
+                    <span>SQLite</span>
+                    <span>bcrypt</span>
+                    <span>AES</span>
+
+                </div>
+
+                <div class="current-phase">
+
+                    <span>CURRENT PHASE</span>
+
+                    <h4>Backend Development</h4>
+
+                </div>
+
+                <button class="project-btn progress-btn">
+
+                    Development Status →
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- ================= BACK ================= -->
+
+        <div class="flip-back">
+
+            <h3>Project Progress</h3>
+
+            <div class="progress-circle">
+
+                <span>72%</span>
+
+            </div>
+
+            <div class="progress-section">
+
+                <h4>Completed</h4>
+
+                <ul>
+
+                    <li>✔ Login System</li>
+
+                    <li>✔ Password Generator</li>
+
+                    <li>✔ AES Encryption</li>
+
+                    <li>✔ SQLite Database</li>
+
+                </ul>
+
+            </div>
+
+            <div class="progress-section">
+
+                <h4>Next Milestones</h4>
+
+                <ul>
+
+                    <li>○ Password Vault</li>
+
+                    <li>○ Cloud Sync</li>
+
+                    <li>○ Export Passwords</li>
+
+                </ul>
+
+            </div>
+
+            <button class="project-btn back-btn">
+
+                ← Back
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
 
             <!-- Cloud Security Lab -->
 
-            <div class="project-card">
+            <div class="project-card scroll-card">
 
                 <div class="project-image">
 
@@ -588,9 +666,9 @@
 
         <div class="section-heading">
 
-            <span>CERTIFICATES</span>
+            <span class="fade-up">CERTIFICATES</span>
 
-            <h2>Learning Journey</h2>
+            <h2 class="fade-up">Learning Journey</h2>
 
         </div>
 
@@ -598,7 +676,7 @@
 
             <!-- Certificate 1 -->
 
-            <div class="certificate-card">
+            <div class="certificate-card scroll-card">
 
                 <div class="certificate-image">
 
@@ -630,7 +708,7 @@
 
             <!-- Certificate 2 -->
 
-            <div class="certificate-card">
+            <div class="certificate-card scroll-card">
 
                 <div class="certificate-image">
 
@@ -662,7 +740,7 @@
 
             <!-- Certificate 3 -->
 
-            <div class="certificate-card">
+            <div class="certificate-card scroll-card">
 
                 <div class="certificate-image">
 
@@ -702,9 +780,9 @@
 
         <div class="section-heading">
 
-            <span>PROFESSIONAL JOURNEY</span>
+            <span class="fade-up">PROFESSIONAL JOURNEY</span>
 
-            <h2>Preparing for the Industry</h2>
+            <h2 class="fade-up">Preparing for the Industry</h2>
 
         </div>
 
@@ -712,7 +790,7 @@
 
             <!-- Current Status -->
 
-            <div class="journey-card">
+            <div class="journey-card scroll-card">
 
                 <i class="fas fa-user-graduate"></i>
 
@@ -733,7 +811,7 @@
 
             <!-- Internship -->
 
-            <div class="journey-card">
+            <div class="journey-card scroll-card">
 
                 <i class="fas fa-briefcase"></i>
 
@@ -753,7 +831,7 @@
 
             <!-- Learning -->
 
-            <div class="journey-card">
+            <div class="journey-card scroll-card">
 
                 <i class="fas fa-rocket"></i>
 
@@ -792,15 +870,15 @@
 
         <div class="section-heading">
 
-            <span>ACHIEVEMENTS</span>
+            <span class="fade-up">ACHIEVEMENTS</span>
 
-            <h2>Milestones & Accomplishments</h2>
+            <h2 class="fade-up">Milestones & Accomplishments</h2>
 
         </div>
 
         <div class="achievement-grid">
 
-            <div class="achievement-card">
+            <div class="achievement-card scroll-card">
 
                 <i class="fas fa-university"></i>
 
@@ -815,7 +893,7 @@
 
             </div>
 
-            <div class="achievement-card">
+            <div class="achievement-card scroll-card">
 
                 <i class="fas fa-school"></i>
 
@@ -829,7 +907,7 @@
 
             </div>
 
-            <div class="achievement-card">
+            <div class="achievement-card scroll-card">
 
                 <i class="fas fa-laptop-code"></i>
 
@@ -843,7 +921,7 @@
 
             </div>
 
-            <div class="achievement-card">
+            <div class="achievement-card scroll-card">
 
                 <i class="fas fa-chart-line"></i>
 
@@ -866,9 +944,9 @@
 
         <div class="section-heading">
 
-            <span>CONTACT</span>
+            <span class="fade-up">CONTACT</span>
 
-            <h2>Let's Connect</h2>
+            <h2 class="fade-up">Let's Connect</h2>
 
         </div>
 
@@ -886,7 +964,7 @@
 
             <div class="contact-info">
 
-                <div class="contact-card">
+                <div class="contact-card scroll-card">
 
                     <i class="fas fa-envelope"></i>
 
@@ -902,7 +980,7 @@
 
                 </div>
 
-                <div class="contact-card">
+                <div class="contact-card scroll-card ">
 
                     <i class="fab fa-github"></i>
 
@@ -920,7 +998,7 @@
 
                 </div>
 
-                <div class="contact-card">
+                <div class="contact-card scroll-card">
 
                     <i class="fab fa-linkedin"></i>
 
@@ -938,7 +1016,7 @@
 
                 </div>
 
-                <div class="contact-card">
+                <div class="contact-card scroll-card">
 
                     <i class="fas fa-location-dot"></i>
 
