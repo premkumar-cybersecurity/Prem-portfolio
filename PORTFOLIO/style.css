@@ -1087,56 +1087,6 @@ header.scrolled{
     height:100%;
 }
 
-/* ================= FLIP CARD ================= */
-
-.flip-card{
-    perspective:1200px;
-    height:auto;
-    align-self:stretch;
-}
-
-.flip-inner{
-    position:relative;
-    width:100%;
-    min-height:100%;
-}
-
-.flip-card.flipped .flip-inner{
-    transform:rotateY(180deg);
-}
-
-.flip-front,
-.flip-back{
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    border-radius:20px;
-    overflow:hidden;
-    backface-visibility:hidden;
-    -webkit-backface-visibility:hidden;
-    background:#171717;
-    border:1px solid rgba(255,255,255,.08);
-}
-
-.flip-front,
-.flip-back{
-    min-height:650px;
-}
-
-.flip-front{
-    display:flex;
-    flex-direction:column;
-}
-
-.flip-back{
-    transform:rotateY(180deg);
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    padding:35px;
-}
 
 
 .project-card:hover{
@@ -1203,89 +1153,9 @@ header.scrolled{
 
 }
 
-.progress-circle{
 
-    width:160px;
-    height:160px;
-    border-radius:50%;
 
-    background:
-        conic-gradient(#fff 260deg,#2a2a2a 0);
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    margin:30px auto;
-
-    position:relative;
-
-}
-
-.progress-circle::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:125px;
-    height:125px;
-
-    background:#171717;
-
-    border-radius:50%;
-
-}
-
-.progress-circle span{
-
-    position:relative;
-
-    z-index:2;
-
-    font-size:34px;
-
-    font-weight:bold;
-
-}
-
-.progress-section{
-
-    width:100%;
-    margin-top:25px;
-
-}
-
-.progress-section h4{
-
-    margin-bottom:15px;
-    font-size:18px;
-
-}
-
-.progress-section ul{
-
-    list-style:none;
-
-    padding:0;
-
-}
-
-.progress-section li{
-
-    margin-bottom:12px;
-
-    color:#d7d7d7;
-
-}
-
-.back-btn{
-
-    margin-top:30px;
-
-    width:100%;
-
-}
 
 .project-card:hover .project-image img{
 
@@ -1313,45 +1183,6 @@ header.scrolled{
 
 }
 
-.project-card:hover img{
-
-    transform:scale(1.08);
-
-}
-
-.current-phase{
-
-    margin:25px 0;
-    padding:18px;
-
-    border-top:1px solid rgba(255,255,255,.08);
-    border-bottom:1px solid rgba(255,255,255,.08);
-
-}
-
-.current-phase span{
-
-    display:block;
-
-    color:#9f9f9f;
-
-    font-size:13px;
-
-    text-transform:uppercase;
-
-    letter-spacing:1px;
-
-    margin-bottom:8px;
-
-}
-
-.current-phase h4{
-
-    font-size:20px;
-
-    font-weight:600;
-
-}
 
 
 .project-status{
@@ -1429,13 +1260,6 @@ header.scrolled{
 
 }
 
-.flip-front .project-content{
-
-    display:flex;
-    flex-direction:column;
-    height:100%;
-
-}
 
 .tech-stack{
 
@@ -1479,8 +1303,7 @@ header.scrolled{
 
     gap:15px;
 
-    margin-top:auto;
-
+    
 }
 .project-card:hover .project-buttons{
 
@@ -1567,6 +1390,8 @@ header.scrolled{
     transform:translateX(3px);
 
 }
+
+
 
 /*CERTI*/
 
@@ -2914,201 +2739,6 @@ section{
 
 }
 
-/*==========================
-      FLIP CARD
-===========================*/
-
-.flip-card{
-
-    position:relative;
-
-    height:640px;
-
-    perspective:1400px;
-
-}
-
-.flip-inner{
-
-    width:100%;
-    height:100%;
-
-    position:relative;
-
-    transition:.8s;
-
-    transform-style:preserve-3d;
-
-}
-
-.flip-card.flipped .flip-inner{
-
-    transform:rotateY(180deg);
-
-}
-
-.flip-front,
-.flip-back{
-
-    position:absolute;
-
-    inset:0;
-
-    background:#171717;
-
-    border:1px solid rgba(255,255,255,.08);
-
-    border-radius:20px;
-
-    overflow:hidden;
-
-    backface-visibility:hidden;
-
-}
-
-.flip-back{
-
-    transform:rotateY(180deg);
-
-    padding:30px;
-
-}
-
-.flip-front .project-content{
-
-    padding:30px;
-
-}
-
-.current-phase{
-
-    margin:30px 0;
-
-    padding:18px 0;
-
-    border-top:1px solid rgba(255,255,255,.08);
-
-    border-bottom:1px solid rgba(255,255,255,.08);
-
-}
-
-.current-phase span{
-
-    display:block;
-
-    color:#999;
-
-    font-size:13px;
-
-    letter-spacing:1px;
-
-    text-transform:uppercase;
-
-}
-
-.current-phase h4{
-
-    margin-top:12px;
-
-    font-size:28px;
-
-}
-
-.progress-btn{
-
-    width:100%;
-
-}
-
-.flip-back h3{
-
-    text-align:center;
-
-    margin-bottom:25px;
-
-}
-
-.progress-circle{
-
-    width:130px;
-
-    height:130px;
-
-    border:7px solid white;
-
-    border-radius:50%;
-
-    margin:0 auto 30px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    font-size:28px;
-
-    font-weight:bold;
-
-}
-.progress-btn,
-.back-btn{
-
-    width:100%;
-    margin-top:25px;
-
-}
-
-.project-card:hover .project-image img{
-
-    transform:scale(1.08);
-
-}
-
-.project-card{
-
-    transition:.35s;
-
-}
-
-.project-card:hover{
-
-    transform:translateY(-8px);
-
-    box-shadow:0 18px 40px rgba(255,255,255,.08);
-
-}
-
-.completed-section,
-.upcoming-section{
-
-    margin-top:25px;
-
-}
-
-.completed-section ul,
-.upcoming-section ul{
-
-    list-style:none;
-
-    margin-top:15px;
-
-}
-
-.completed-section li,
-.upcoming-section li{
-
-    margin-bottom:12px;
-
-}
-
-.back-btn{
-
-    width:100%;
-
-    margin-top:30px;
-
-}
 
 
 /*==================================
