@@ -321,26 +321,16 @@ fadeElements.forEach(element=>{
 
 });
 
-/*==========================
-      FLIP CARD
-==========================*/
-
 const flipCard = document.querySelector(".flip-card");
-const progressBtn = document.querySelector(".progress-btn");
-const backBtn = document.querySelector(".back-btn");
 
-if (flipCard && progressBtn && backBtn) {
+if (flipCard){
 
-    progressBtn.addEventListener("click", function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        flipCard.classList.add("flipped");
-    });
+    flipCard.addEventListener("click",function(e){
 
-    backBtn.addEventListener("click", function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        flipCard.classList.remove("flipped");
+        if(e.target.closest("a")) return;
+
+        flipCard.classList.toggle("flipped");
+
     });
 
 }

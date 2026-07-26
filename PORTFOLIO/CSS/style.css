@@ -1087,65 +1087,55 @@ header.scrolled{
     height:100%;
 }
 
-/*====================================
-        FLIP CARD
-====================================*/
+/* ================= FLIP CARD ================= */
 
 .flip-card{
-
-    perspective:1500px;
-
+    perspective:1200px;
+    height:auto;
+    align-self:stretch;
 }
 
 .flip-inner{
-
     position:relative;
-
     width:100%;
-
-    height:100%;
-
-    transition:transform .8s ease;
-
-    transform-style:preserve-3d;
-
+    min-height:100%;
 }
 
 .flip-card.flipped .flip-inner{
-
     transform:rotateY(180deg);
-
 }
 
 .flip-front,
 .flip-back{
-
     position:absolute;
-
     inset:0;
-
     width:100%;
-
     height:100%;
-
-    backface-visibility:hidden;
-
-    -webkit-backface-visibility:hidden;
-
     border-radius:20px;
-
     overflow:hidden;
-
+    backface-visibility:hidden;
+    -webkit-backface-visibility:hidden;
     background:#171717;
+    border:1px solid rgba(255,255,255,.08);
+}
 
+.flip-front,
+.flip-back{
+    min-height:650px;
+}
+
+.flip-front{
+    display:flex;
+    flex-direction:column;
 }
 
 .flip-back{
-
     transform:rotateY(180deg);
-
-    padding:30px;
-
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:35px;
 }
 
 
@@ -1215,23 +1205,45 @@ header.scrolled{
 
 .progress-circle{
 
-    width:140px;
+    width:160px;
+    height:160px;
+    border-radius:50%;
 
-    height:140px;
+    background:
+        conic-gradient(#fff 260deg,#2a2a2a 0);
 
-    border:6px solid white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin:30px auto;
+
+    position:relative;
+
+}
+
+.progress-circle::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:125px;
+    height:125px;
+
+    background:#171717;
 
     border-radius:50%;
 
-    margin:25px auto;
+}
 
-    display:flex;
+.progress-circle span{
 
-    align-items:center;
+    position:relative;
 
-    justify-content:center;
+    z-index:2;
 
-    font-size:30px;
+    font-size:34px;
 
     font-weight:bold;
 
@@ -1239,6 +1251,7 @@ header.scrolled{
 
 .progress-section{
 
+    width:100%;
     margin-top:25px;
 
 }
@@ -1246,6 +1259,7 @@ header.scrolled{
 .progress-section h4{
 
     margin-bottom:15px;
+    font-size:18px;
 
 }
 
@@ -1253,11 +1267,15 @@ header.scrolled{
 
     list-style:none;
 
+    padding:0;
+
 }
 
 .progress-section li{
 
-    margin-bottom:10px;
+    margin-bottom:12px;
+
+    color:#d7d7d7;
 
 }
 
@@ -3031,6 +3049,33 @@ section{
     font-size:28px;
 
     font-weight:bold;
+
+}
+.progress-btn,
+.back-btn{
+
+    width:100%;
+    margin-top:25px;
+
+}
+
+.project-card:hover .project-image img{
+
+    transform:scale(1.08);
+
+}
+
+.project-card{
+
+    transition:.35s;
+
+}
+
+.project-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 40px rgba(255,255,255,.08);
 
 }
 
