@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://premkumar-portfolio-kohl.vercel.app/sitemap.xml
