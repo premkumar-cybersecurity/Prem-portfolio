@@ -1121,39 +1121,6 @@ header.scrolled{
     transition:transform .5s ease;
 
 }
-.current-phase{
-
-    margin:30px 0;
-
-    padding:18px 0;
-
-    border-top:1px solid rgba(255,255,255,.08);
-
-    border-bottom:1px solid rgba(255,255,255,.08);
-
-}
-
-.current-phase span{
-
-    display:block;
-
-    color:#888;
-
-    font-size:13px;
-
-    letter-spacing:2px;
-
-    margin-bottom:10px;
-
-}
-
-.current-phase h4{
-
-    font-size:28px;
-
-}
-
-
 
 
 
@@ -1388,6 +1355,23 @@ header.scrolled{
 .project-btn:hover i{
 
     transform:translateX(3px);
+
+}
+
+.coming-soon{
+
+    background:#ffffff;
+    color:#111;
+    cursor:default;
+
+}
+
+.coming-soon:hover{
+
+    transform:none;
+    box-shadow:none;
+    background:#ffffff;
+    color:#111;
 
 }
 
