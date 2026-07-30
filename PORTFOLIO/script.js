@@ -334,3 +334,65 @@ if (flipCard){
     });
 
 }
+
+/*=========================
+    PREMIUM CONTACT FORM
+==========================*/
+
+const pkForm = document.getElementById("pkContactForm");
+
+if (pkForm) {
+
+    const sendBtn = pkForm.querySelector(".pk-send-btn");
+    const successCard = document.getElementById("pkSuccess");
+
+    pkForm.addEventListener("submit", async function(e){
+
+        e.preventDefault();
+
+        const originalHTML = sendBtn.innerHTML;
+
+        sendBtn.disabled = true;
+
+        sendBtn.innerHTML =
+        `<i class="fas fa-spinner fa-spin"></i> Sending...`;
+
+        const formData = new FormData(pkForm);
+
+        try{
+
+            const response = await fetch(pkForm.action,{
+                method:"POST",
+                body:formData,
+                headers:{
+                    "Accept":"application/json"
+                }
+            });
+
+            if(response.ok){
+
+                pkForm.reset();
+
+                pkForm.style.display="none";
+
+                successCard.style.display="block";
+
+            }else{
+
+                alert("Message couldn't be sent. Please try again.");
+
+            }
+
+        }catch(error){
+
+            alert("Network Error. Please try again.");
+
+        }
+
+        sendBtn.disabled=false;
+
+        sendBtn.innerHTML=originalHTML;
+
+    });
+
+}

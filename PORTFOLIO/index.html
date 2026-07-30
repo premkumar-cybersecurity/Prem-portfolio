@@ -939,133 +939,142 @@
         </div>
 
     </section>
-    <!-- ================= CONTACT ================= -->
 
-    <section id="contact" class="contact">
+    <!-- ================= CONTACT SECTION ================= -->
+    <section id="contact" class="pk-contact">
 
-        <div class="section-heading">
-
-            <span class="fade-up">CONTACT</span>
-
-            <h2 class="fade-up">Let's Connect</h2>
-
+        <div class="pk-contact-header">
+            <h2>Let's Connect</h2>
+            <p>
+                Interested in internships, collaborations or cybersecurity projects?
+                I'd love to hear from you.
+            </p>
         </div>
 
-        <p class="contact-text">
+        <div class="pk-contact-wrapper">
 
-            I'm always open to connecting with professionals, recruiters,
-            fellow students and anyone interested in Cyber Security,
-            Cloud Security or AI Security.
+            <!-- LEFT CARD -->
+            <div class="pk-profile-card">
 
-        </p>
+                <div class="pk-photo-box">
+                    <img src="assets/profile.jpg" alt="Prem Kumar">
+                </div>
 
-        <div class="contact-container">
+                <h3>Prem Kumar</h3>
 
-            <!-- Left -->
+                <p class="pk-role">Cyber Security Student</p>
 
-            <div class="contact-info">
+                <div class="pk-status">
+                    <span class="pk-dot"></span>
+                    Open to Opportunities
+                </div>
 
-                <div class="contact-card scroll-card">
+                <div class="pk-social-buttons">
 
-                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:premjii1826@gmail.com" class="pk-social-btn">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email</span>
+                    </a>
 
-                    <div>
+                    <a href="https://github.com/premjii-007" target="_blank" class="pk-social-btn">
 
-                        <h3>Email</h3>
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
 
-                        <a href="mailto:prem.cybersecurity@gmail.com">
-                            prem.cybersecurity@gmail.com
-                        </a>
+                    </a>
 
-                    </div>
+                    <a href="https://www.linkedin.com/in/premkumar-cybersecurity" target="_blank" class="pk-social-btn">
+
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+
+                    </a>
 
                 </div>
 
-                <div class="contact-card scroll-card ">
+                <a href="assets/resume.pdf" download class="pk-resume-btn">
 
-                    <i class="fab fa-github"></i>
+                    <i class="fas fa-download"></i>
 
-                    <div>
-
-                        <h3>GitHub</h3>
-
-                        <a href="https://github.com/premkumar-cybersecurity" target="_blank">
-
-                            github.com/premkumar-cybersecurity
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-                <div class="contact-card scroll-card">
-
-                    <i class="fab fa-linkedin"></i>
-
-                    <div>
-
-                        <h3>LinkedIn</h3>
-
-                        <a href="https://www.linkedin.com/in/premkumar-cybersecurity" target="_blank">
-
-                            Connect with me
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-                <div>
-
-                <a class="contact-card">
-
-                    <i class="fas fa-briefcase"></i>
-
-                    <div>
-
-                        <div class="contact-header">
-
-                            <h3>Open to Opportunities</h3>
-
-
-                        </div>
-
-                        <p>Internships • Collaborations • Networking</p>
-
-                    </div>
+                    Download Resume
 
                 </a>
 
             </div>
 
-        </div>
+            <!-- RIGHT FORM -->
 
-        <!-- Right -->
+            <div class="pk-form-card">
 
-        <form class="contact-form" action="https://formsubmit.co/prem.cybersecurity@gmail.com" method="POST">
+                <div class="pk-form-title">
 
-            <input type="text" name="name" placeholder="Your Name" required>
+                    <h3>Contact Me</h3>
+                    <p>
+                        Let's discuss internships, projects or collaborations.
+                        I'll reply as soon as possible.
+                    </p>
 
-            <input type="email" name="email" placeholder="Your Email" required>
+                </div>
 
-            <input type="text" name="subject" placeholder="Subject">
+                <form id="pkContactForm" action="https://formsubmit.co/premjii1826@gmail.com" method="POST">
 
-            <textarea name="message" rows="7" placeholder="Write your message..." required></textarea>
+                    <input type="hidden" name="_captcha" value="false">
 
-            <button type="submit">
+                    <input type="hidden" name="_subject" value="New Portfolio Contact">
 
-                Send Message
+                    <div class="pk-input-group">
 
-            </button>
+                        <input type="text" name="name" placeholder="Name" required>
 
-        </form>
+                    </div>
+
+                    <div class="pk-input-group">
+
+                        <input type="email" name="email" placeholder="Email" required>
+
+                    </div>
+
+                    <div class="pk-input-group">
+
+                        <input type="text" name="subject" placeholder="Subject" required>
+
+                    </div>
+
+                    <div class="pk-input-group">
+
+                        <textarea placeholder="Message" rows="5" required></textarea>
+
+                    </div>
+
+                    <button class="pk-send-btn" type="submit">
+
+                        <i class="fas fa-paper-plane"></i>
+
+                        Send Secure Message
+
+                    </button>
+
+                </form>
+
+                <div id="pkSuccess" class="pk-success">
+
+                    <i class="fas fa-check-circle"></i>
+
+                    <h3>Secure Connection Established</h3>
+
+                    <p>
+                        Your message has been delivered successfully.
+                        Thank you for reaching out.
+                    </p>
+
+                </div>
+
+            </div>
 
         </div>
 
     </section>
-
+    <!-- ================= END CONTACT ================= -->
     <!-- ================= FOOTER ================= -->
 
     <footer class="footer">
