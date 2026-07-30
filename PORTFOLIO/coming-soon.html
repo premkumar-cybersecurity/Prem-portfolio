@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Project Under Development | Prem Kumar</title>
+
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#0D0D0D;
+    color:white;
+
+    font-family:Inter,sans-serif;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    min-height:100vh;
+
+    padding:25px;
+
+}
+
+.terminal{
+
+    width:100%;
+    max-width:850px;
+
+    background:#111;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 20px 60px rgba(255,255,255,.05);
+
+}
+
+.terminal-header{
+
+    background:#1b1b1b;
+
+    padding:15px 25px;
+
+    display:flex;
+    align-items:center;
+
+}
+
+.dot{
+
+    width:12px;
+    height:12px;
+
+    border-radius:50%;
+
+    margin-right:8px;
+
+}
+
+.red{background:#ff5f57;}
+.yellow{background:#febc2e;}
+.green{background:#28c840;}
+
+.header-title{
+
+    margin-left:15px;
+
+    color:#BDBDBD;
+
+    font-size:14px;
+
+}
+
+.terminal-body{
+
+    padding:40px;
+
+}
+
+.prompt{
+
+    color:white;
+
+    font-family:Consolas,monospace;
+
+    margin-bottom:25px;
+
+    font-size:18px;
+
+}
+
+.status{
+
+    color:#55ff55;
+
+}
+
+.title{
+
+    font-size:48px;
+
+    margin-bottom:18px;
+
+    font-family:'Space Grotesk',sans-serif;
+
+}
+
+.text{
+
+    color:#BDBDBD;
+
+    line-height:1.9;
+
+    margin-bottom:35px;
+
+}
+
+.output{
+
+    background:#181818;
+
+    border-radius:12px;
+
+    padding:22px;
+
+    margin-bottom:35px;
+
+    font-family:Consolas,monospace;
+
+    line-height:2;
+
+    color:#E5E5E5;
+
+}
+
+.output span{
+
+    color:#55ff55;
+
+}
+
+.home{
+
+    display:inline-block;
+
+    padding:15px 34px;
+
+    border-radius:50px;
+
+    background:white;
+
+    color:black;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.home:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 35px rgba(255,255,255,.15);
+
+}
+
+.cursor{
+
+    display:inline-block;
+
+    width:10px;
+
+    height:20px;
+
+    background:white;
+
+    animation:blink .8s infinite;
+
+    margin-left:3px;
+
+}
+
+@keyframes blink{
+
+50%{
+
+opacity:0;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.title{
+
+font-size:34px;
+
+}
+
+.terminal-body{
+
+padding:28px;
+
+}
+
+}
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="terminal">
+
+<div class="terminal-header">
+
+<div class="dot red"></div>
+<div class="dot yellow"></div>
+<div class="dot green"></div>
+
+<div class="header-title">
+terminal — project
+</div>
+
+</div>
+
+<div class="terminal-body">
+
+<div class="prompt">
+
+> ./<span id="project-name">Project</span>
+
+</div>
+
+<h1 class="title">
+
+PROJECT UNDER DEVELOPMENT
+
+</h1>
+
+<p class="text">
+
+The resource you requested is not available yet.
+
+I'm currently working on this project.
+
+The source code, documentation and live demo will be published once development is complete.
+
+</p>
+
+<div class="output">
+
+✔ Project Created
+
+✔ Planning Completed
+
+<span>⟳ Development In Progress</span>
+
+○ Documentation Pending
+
+○ Public Release Pending
+
+</div>
+
+<a href="index.html" class="home">
+
+← Return to Home
+
+</a>
+
+<div style="margin-top:30px;font-family:Consolas,monospace;">
+
+C:\Users\Prem\Projects>
+
+<span class="cursor"></span>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+const params=new URLSearchParams(window.location.search);
+
+const project=params.get("project");
+
+if(project){
+
+document.getElementById("project-name").textContent=project;
+
+}
+
+</script>
+
+</body>
+
+</html>

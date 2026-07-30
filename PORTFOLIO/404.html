@@ -1,76 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 | Prem Kumar Portfolio</title>
+
+    <title>404 | Prem Kumar</title>
+
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
 
     <style>
+
         *{
             margin:0;
             padding:0;
             box-sizing:border-box;
-            font-family:Arial, Helvetica, sans-serif;
         }
 
         body{
-            background:#0d0d0d;
-            color:white;
+
+            background:#0D0D0D;
+            color:#fff;
+
+            font-family:'Inter',sans-serif;
+
             display:flex;
             justify-content:center;
             align-items:center;
-            height:100vh;
-            text-align:center;
+
+            min-height:100vh;
+
+            padding:25px;
+
         }
 
-        .container{
-            padding:20px;
+        .terminal{
+
+            width:100%;
+            max-width:760px;
+
+            background:#111;
+
+            border:1px solid rgba(255,255,255,.08);
+
+            border-radius:18px;
+
+            overflow:hidden;
+
+            box-shadow:
+            0 20px 60px rgba(255,255,255,.05);
+
+        }
+
+        .terminal-header{
+
+            background:#1b1b1b;
+
+            padding:15px 22px;
+
+            display:flex;
+            align-items:center;
+            gap:10px;
+
+        }
+
+        .dot{
+
+            width:12px;
+            height:12px;
+            border-radius:50%;
+
+        }
+
+        .red{background:#ff5f57;}
+        .yellow{background:#febc2e;}
+        .green{background:#28c840;}
+
+        .terminal-title{
+
+            margin-left:12px;
+
+            color:#BDBDBD;
+
+            font-size:14px;
+
+        }
+
+        .terminal-body{
+
+            padding:45px;
+
+        }
+
+        .prompt{
+
+            color:#ffffff;
+
+            font-family:Consolas,monospace;
+
+            margin-bottom:25px;
+
         }
 
         h1{
-            font-size:7rem;
-            margin-bottom:10px;
+
+            font-family:'Space Grotesk',sans-serif;
+
+            font-size:90px;
+
+            margin-bottom:8px;
+
         }
 
         h2{
-            margin-bottom:20px;
-            font-weight:500;
+
+            font-family:'Space Grotesk',sans-serif;
+
+            font-size:34px;
+
+            margin-bottom:25px;
+
         }
 
         p{
-            color:#b3b3b3;
+
+            color:#BDBDBD;
+
+            font-size:18px;
+
+            line-height:1.9;
+
             margin-bottom:35px;
+
         }
 
-        a{
+        .home-btn{
+
+            display:inline-block;
+
+            padding:15px 34px;
+
+            border-radius:50px;
+
+            background:#fff;
+
+            color:#000;
+
             text-decoration:none;
-            color:black;
-            background:white;
-            padding:14px 28px;
-            border-radius:8px;
-            font-weight:bold;
-            transition:.3s;
+
+            font-weight:600;
+
+            transition:.35s;
+
         }
 
-        a:hover{
-            background:#d9d9d9;
+        .home-btn:hover{
+
+            transform:translateY(-5px);
+
+            box-shadow:0 12px 35px rgba(255,255,255,.15);
+
+        }
+
+        @media(max-width:768px){
+
+            h1{
+                font-size:65px;
+            }
+
+            h2{
+                font-size:28px;
+            }
+
+            p{
+                font-size:16px;
+            }
+
+            .terminal-body{
+                padding:30px;
+            }
+
         }
 
     </style>
+
 </head>
+
 <body>
 
-<div class="container">
+<div class="terminal">
 
-<h1>404</h1>
+    <div class="terminal-header">
 
-<h2>Page Not Found</h2>
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
 
-<p>The page you're looking for doesn't exist.</p>
+        <span class="terminal-title">
+            terminal — portfolio
+        </span>
 
-<a href="/">Return to Home</a>
+    </div>
+
+    <div class="terminal-body">
+
+        <div class="prompt">
+            > ./portfolio
+        </div>
+
+        <h1>404</h1>
+
+        <h2>RESOURCE NOT FOUND</h2>
+
+        <p>
+            The requested resource could not be located.
+            It may have been moved, deleted, or the URL you entered is incorrect.
+            Return to the homepage to continue exploring my portfolio.
+        </p>
+
+        <a href="index.html" class="home-btn">
+            ← Back to Home
+        </a>
+
+    </div>
 
 </div>
 
 </body>
+
 </html>

@@ -87,15 +87,9 @@ section{
 }
 
 /*SCROLLL ANIME*/
-
-.hidden{
-
-    opacity:0;
-
-    transform:translateY(70px);
-
-    transition:all .9s ease;
-
+.hidden {
+    opacity: 0;
+    transform: translateY(15px);
 }
 
 .show{
@@ -2533,6 +2527,7 @@ section{
     font-size:16px;
 
 }
+
 
 .hero-image img{
 
