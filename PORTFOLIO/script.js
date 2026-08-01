@@ -2,13 +2,13 @@
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
-    anchor.addEventListener("click", function(e){
+    anchor.addEventListener("click", function (e) {
 
         e.preventDefault();
 
         document.querySelector(this.getAttribute("href")).scrollIntoView({
 
-            behavior:"smooth"
+            behavior: "smooth"
 
         });
 
@@ -21,19 +21,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 const navbar = document.querySelector(".navbar");
 
-window.addEventListener("scroll", ()=>{
+window.addEventListener("scroll", () => {
 
-    if(window.scrollY > 50){
+    if (window.scrollY > 50) {
 
-        navbar.style.padding="15px 10%";
-        navbar.style.boxShadow="0 10px 30px rgba(0,0,0,.25)";
+        navbar.style.padding = "15px 10%";
+        navbar.style.boxShadow = "0 10px 30px rgba(0,0,0,.25)";
 
     }
 
-    else{
+    else {
 
-        navbar.style.padding="22px 10%";
-        navbar.style.boxShadow="none";
+        navbar.style.padding = "22px 10%";
+        navbar.style.boxShadow = "none";
 
     }
 
@@ -45,47 +45,47 @@ window.addEventListener("scroll", ()=>{
 
 /* fade anime */
 
-const observer=new IntersectionObserver((entries)=>{
+const observer = new IntersectionObserver((entries) => {
 
-entries.forEach(entry=>{
+    entries.forEach(entry => {
 
-if(entry.isIntersecting){
+        if (entry.isIntersecting) {
 
-entry.target.style.opacity="1";
+            entry.target.style.opacity = "1";
 
-entry.target.style.transform="translateY(0)";
+            entry.target.style.transform = "translateY(0)";
 
-}
+        }
 
-});
+    });
 
-},{threshold:.15});
+}, { threshold: .15 });
 
 
-document.querySelectorAll("section").forEach(section=>{
+document.querySelectorAll("section").forEach(section => {
 
-section.style.opacity="0";
+    section.style.opacity = "0";
 
-section.style.transform="translateY(80px)";
+    section.style.transform = "translateY(80px)";
 
-section.style.transition=".8s";
+    section.style.transition = ".8s";
 
-observer.observe(section);
+    observer.observe(section);
 
 });
 
 
 /* scroll up */
 
-const topBtn=document.createElement("button");
+const topBtn = document.createElement("button");
 
-topBtn.innerHTML="↑";
+topBtn.innerHTML = "↑";
 
 topBtn.classList.add("topBtn");
 
 document.body.appendChild(topBtn);
 
-topBtn.style.cssText=`
+topBtn.style.cssText = `
 
 position:fixed;
 bottom:30px;
@@ -103,31 +103,31 @@ transition:.3s;
 
 `;
 
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll", () => {
 
-if(window.scrollY>300){
+    if (window.scrollY > 300) {
 
-topBtn.style.display="block";
+        topBtn.style.display = "block";
 
-}
+    }
 
-else{
+    else {
 
-topBtn.style.display="none";
+        topBtn.style.display = "none";
 
-}
-
-});
-
-topBtn.addEventListener("click",()=>{
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
+    }
 
 });
+
+topBtn.addEventListener("click", () => {
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
 
 });
 
@@ -164,19 +164,19 @@ window.addEventListener("scroll", () => {
 
 /*IMG Hover */
 
-document.querySelectorAll("img").forEach(img=>{
+document.querySelectorAll("img").forEach(img => {
 
-img.addEventListener("mouseenter",()=>{
+    img.addEventListener("mouseenter", () => {
 
-img.style.transform="scale(1.03)";
+        img.style.transform = "scale(1.03)";
 
-});
+    });
 
-img.addEventListener("mouseleave",()=>{
+    img.addEventListener("mouseleave", () => {
 
-img.style.transform="scale(1)";
+        img.style.transform = "scale(1)";
 
-});
+    });
 
 });
 
@@ -207,24 +207,24 @@ if (header) {
 
 /*Timeline Prog*/
 
-const timeline=document.querySelector(".timeline");
-const progress=document.querySelector(".timeline-progress");
+const timeline = document.querySelector(".timeline");
+const progress = document.querySelector(".timeline-progress");
 
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll", () => {
 
-    if(!timeline || !progress) return;
+    if (!timeline || !progress) return;
 
-    const rect=timeline.getBoundingClientRect();
+    const rect = timeline.getBoundingClientRect();
 
-    const windowHeight=window.innerHeight;
+    const windowHeight = window.innerHeight;
 
-    const totalHeight=timeline.offsetHeight;
+    const totalHeight = timeline.offsetHeight;
 
-    let percent=(windowHeight-rect.top)/(windowHeight+totalHeight);
+    let percent = (windowHeight - rect.top) / (windowHeight + totalHeight);
 
-    percent=Math.max(0,Math.min(percent,1));
+    percent = Math.max(0, Math.min(percent, 1));
 
-    progress.style.height=(percent*100)+"%";
+    progress.style.height = (percent * 100) + "%";
 
 });
 
@@ -259,19 +259,17 @@ window.onload = function () {
 
 };
 
-/*==================================
-     UNIVERSAL CARD GLOW
-==================================*/
+/*Universal card Glow*/
 
 const scrollCards = document.querySelectorAll(".scroll-card");
 
-const glowObserver = new IntersectionObserver((entries)=>{
+const glowObserver = new IntersectionObserver((entries) => {
 
-    entries.forEach(entry=>{
+    entries.forEach(entry => {
 
-        if(entry.isIntersecting){
+        if (entry.isIntersecting) {
 
-            scrollCards.forEach(card=>{
+            scrollCards.forEach(card => {
 
                 card.classList.remove("active-card");
 
@@ -283,27 +281,25 @@ const glowObserver = new IntersectionObserver((entries)=>{
 
     });
 
-},{
-    threshold:0.55
+}, {
+    threshold: 0.55
 });
 
-scrollCards.forEach(card=>{
+scrollCards.forEach(card => {
 
     glowObserver.observe(card);
 
 });
 
-/*==================================
-      FADE UP ANIMATION
-==================================*/
+/*Fade up*/
 
 const fadeElements = document.querySelectorAll(".fade-up");
 
-const fadeObserver = new IntersectionObserver((entries)=>{
+const fadeObserver = new IntersectionObserver((entries) => {
 
-    entries.forEach(entry=>{
+    entries.forEach(entry => {
 
-        if(entry.isIntersecting){
+        if (entry.isIntersecting) {
 
             entry.target.classList.add("show");
 
@@ -311,11 +307,11 @@ const fadeObserver = new IntersectionObserver((entries)=>{
 
     });
 
-},{
-    threshold:0.2
+}, {
+    threshold: 0.2
 });
 
-fadeElements.forEach(element=>{
+fadeElements.forEach(element => {
 
     fadeObserver.observe(element);
 
@@ -323,11 +319,11 @@ fadeElements.forEach(element=>{
 
 const flipCard = document.querySelector(".flip-card");
 
-if (flipCard){
+if (flipCard) {
 
-    flipCard.addEventListener("click",function(e){
+    flipCard.addEventListener("click", function (e) {
 
-        if(e.target.closest("a")) return;
+        if (e.target.closest("a")) return;
 
         flipCard.classList.toggle("flipped");
 
@@ -335,18 +331,16 @@ if (flipCard){
 
 }
 
-/*=========================
-    PREMIUM CONTACT FORM
-==========================*/
+/*pk contact form*/
 
 const pkForm = document.getElementById("pkContactForm");
 
 if (pkForm) {
 
     const sendBtn = pkForm.querySelector(".pk-send-btn");
-    const successCard = document.getElementById("pkSuccess");
 
-    pkForm.addEventListener("submit", async function(e){
+
+    pkForm.addEventListener("submit", async function (e) {
 
         e.preventDefault();
 
@@ -355,43 +349,54 @@ if (pkForm) {
         sendBtn.disabled = true;
 
         sendBtn.innerHTML =
-        `<i class="fas fa-spinner fa-spin"></i> Sending...`;
+            `<i class="fas fa-spinner fa-spin"></i> Sending...`;
 
         const formData = new FormData(pkForm);
 
-        try{
+        try {
 
-            const response = await fetch(pkForm.action,{
-                method:"POST",
-                body:formData,
-                headers:{
-                    "Accept":"application/json"
+            const response = await fetch(pkForm.action, {
+                method: "POST",
+                body: formData,
+                headers: {
+                    "Accept": "application/json"
                 }
             });
 
-            if(response.ok){
+            if (response.ok) {
 
                 pkForm.reset();
 
-                pkForm.style.display="none";
+                const toast = document.getElementById("successToast");
 
-                successCard.style.display="block";
+                toast.classList.add("show");
 
-            }else{
+                sendBtn.innerHTML =
+                    `<i class="fas fa-check"></i> Message Sent`;
+
+                setTimeout(() => {
+
+                    toast.classList.remove("show");
+
+                    sendBtn.innerHTML = originalHTML;
+
+                }, 3000);
+
+            } else {
 
                 alert("Message couldn't be sent. Please try again.");
 
             }
 
-        }catch(error){
+        } catch (error) {
 
             alert("Network Error. Please try again.");
 
         }
 
-        sendBtn.disabled=false;
+        sendBtn.disabled = false;
 
-        sendBtn.innerHTML=originalHTML;
+        sendBtn.innerHTML = originalHTML;
 
     });
 

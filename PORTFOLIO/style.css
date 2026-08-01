@@ -1712,9 +1712,7 @@ header.scrolled{
 
 }
 
-/*=============================
-        CONTACT
-==============================*/
+/*Contact*/
 
 .contact{
     background:#0d0d0d;
@@ -1744,9 +1742,7 @@ header.scrolled{
 
 }
 
-/*=============================
-        LEFT CARD
-==============================*/
+/*Contact left card*/
 
 .profile-panel{
 
@@ -1816,9 +1812,7 @@ header.scrolled{
 
 }
 
-/*=============================
-        STATUS
-==============================*/
+/*Cont Status*/
 
 .status{
 
@@ -1856,9 +1850,7 @@ header.scrolled{
 
 }
 
-/*=============================
-    CURRENTLY LEARNING
-==============================*/
+/*Currently Learning*/
 
 .contact-learning{
 
@@ -1905,9 +1897,7 @@ header.scrolled{
 
 }
 
-/*=============================
-      SOCIAL BUTTONS
-==============================*/
+/*Social Buttons*/
 
 .contact-links{
 
@@ -1947,9 +1937,7 @@ header.scrolled{
 
 }
 
-/*=============================
-      RIGHT PANEL
-==============================*/
+/*Right Panel*/
 
 .message-panel{
 
@@ -1990,9 +1978,7 @@ header.scrolled{
 
 }
 
-/*=============================
-        FORM
-==============================*/
+/*Form*/
 
 .contact-form{
 
@@ -2051,9 +2037,7 @@ header.scrolled{
 
 }
 
-/*=============================
-        BUTTON
-==============================*/
+/*Cont Btn*/
 
 .contact-form button{
 
@@ -2097,9 +2081,7 @@ header.scrolled{
 
 }
 
-/*=============================
-      SECURE FOOTER
-==============================*/
+/*Secure Footer*/
 
 .secure-footer{
 
@@ -2147,9 +2129,7 @@ header.scrolled{
 
 }
 
-/*=============================
-      RESPONSIVE
-==============================*/
+/*Responsive Ds*/
 
 @media(max-width:1000px){
 
@@ -2203,9 +2183,7 @@ header.scrolled{
 }
 
 
-/*==========================
-      FOOTER
-==========================*/
+/*Footer*/
 
 .secure-footer{
 
@@ -3053,9 +3031,7 @@ section{
 
 
 
-/*==================================
-      SECTION TITLE ANIMATION
-==================================*/
+/*Section Title Aime*/
 
 .fade-up{
 
@@ -3106,9 +3082,7 @@ section{
 
 }
 
-/*=============================
-      PREMIUM CONTACT
-=============================*/
+/*Pk contact*/
 
 .pk-contact{
     padding:100px 8%;
@@ -3142,9 +3116,7 @@ section{
     align-items:start;
 }
 
-/*=====================
- LEFT CARD
-======================*/
+/*Left card Cont*/
 
 .pk-profile-card{
 
@@ -3389,9 +3361,7 @@ section{
 
 }
 
-/*=====================
- RIGHT FORM
-======================*/
+/*Right cont*/
 
 .pk-form-card{
     background:#141414;
@@ -3401,7 +3371,6 @@ section{
 
     display:flex;
     flex-direction:column;
-    justify-content:center;
 }
 
 .pk-form-card:hover{
@@ -3422,7 +3391,7 @@ section{
 }
 
 .pk-input-group{
-    margin-bottom:57px;
+    margin-bottom:22px;
 }
 
 .pk-input-group label{
@@ -3483,7 +3452,10 @@ section{
     font-weight:700;
     cursor:pointer;
     transition:.35s;
+    margin-top:18px;
+
 }
+
 
 .pk-send-btn:hover{
     transform:translateY(-4px);
@@ -3495,9 +3467,7 @@ section{
     margin-right:10px;
 }
 
-/*=====================
- SUCCESS CARD
-======================*/
+/*Success card*/
 
 .pk-success{
     display:none;
@@ -3526,9 +3496,7 @@ section{
     line-height:1.8;
 }
 
-/*=====================
- RESPONSIVE
-======================*/
+/*Responsive*/
 
 @media(max-width:1000px){
 
@@ -3584,5 +3552,76 @@ section{
     .pk-send-btn{
         padding:16px;
     }
+
+}
+
+
+/*Success toast*/
+
+.success-toast{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    background:#171717;
+
+    border:1px solid #333;
+
+    border-left:5px solid #22c55e;
+
+    border-radius:15px;
+
+    padding:18px 22px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    color:white;
+
+    transform:translateY(120px);
+
+    opacity:0;
+
+    transition:.4s;
+
+    z-index:9999;
+
+}
+
+.success-toast.show{
+
+    transform:translateY(0);
+
+    opacity:1;
+
+}
+
+.success-toast i{
+
+    color:#22c55e;
+
+    font-size:28px;
+
+}
+
+.success-toast strong{
+
+    display:block;
+
+    margin-bottom:5px;
+
+}
+
+.success-toast p{
+
+    color:#bbbbbb;
+
+    font-size:14px;
 
 }
